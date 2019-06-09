@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oPl-ZF-ID1">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quick Notes-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NotesViewController" customModule="QuickNotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="02c-s8-A1A">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="1cw-T4-Syn" userLabel="HeaderView">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="127"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="P47-mf-nuM">
+                                            <rect key="frame" x="20" y="8" width="374" height="111"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Mu-gE-KSo">
+                                                    <rect key="frame" x="0.0" y="5.5" width="332" height="100"/>
+                                                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="peZ-js-pNd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bax-d8-XFx">
+                                                    <rect key="frame" x="340" y="40.5" width="34" height="30"/>
+                                                    <state key="normal" title="Save"/>
+                                                    <connections>
+                                                        <action selector="SaveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tNe-hA-SpE"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="P47-mf-nuM" firstAttribute="leading" secondItem="1cw-T4-Syn" secondAttribute="leading" constant="20" id="Lmh-q1-3Y7"/>
+                                        <constraint firstItem="P47-mf-nuM" firstAttribute="top" secondItem="1cw-T4-Syn" secondAttribute="top" constant="8" id="Rlm-vn-EVX"/>
+                                        <constraint firstAttribute="bottom" secondItem="P47-mf-nuM" secondAttribute="bottom" constant="8" id="cgt-tk-CSS"/>
+                                        <constraint firstAttribute="trailing" secondItem="P47-mf-nuM" secondAttribute="trailing" constant="20" id="pup-12-n7B"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NoteCell" rowHeight="55" id="gUZ-Jq-1j5" customClass="NotesTableViewCell" customModule="QuickNotesApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="155" width="414" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gUZ-Jq-1j5" id="fL7-B7-RRq">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="54.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aSQ-Gy-Cc8">
+                                                    <rect key="frame" x="20" y="11" width="374" height="33"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXW-ak-hkn">
+                                                            <rect key="frame" x="0.0" y="0.0" width="326" height="33"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQL-Yd-ma6">
+                                                            <rect key="frame" x="334" y="0.0" width="40" height="33"/>
+                                                            <state key="normal" title="Share"/>
+                                                            <connections>
+                                                                <action selector="ShareButtonTapped:" destination="gUZ-Jq-1j5" eventType="touchUpInside" id="nic-vY-5lg"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="aSQ-Gy-Cc8" secondAttribute="trailing" id="Keu-l1-E35"/>
+                                                <constraint firstItem="aSQ-Gy-Cc8" firstAttribute="top" secondItem="fL7-B7-RRq" secondAttribute="topMargin" id="bRg-N4-4ku"/>
+                                                <constraint firstItem="aSQ-Gy-Cc8" firstAttribute="leading" secondItem="fL7-B7-RRq" secondAttribute="leadingMargin" id="dg3-bu-t0v"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="aSQ-Gy-Cc8" secondAttribute="bottom" id="rL4-6z-I8F"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="NoteLabel" destination="fL7-B7-RRq" id="SE1-7t-lnq"/>
+                                            <outlet property="noteLabel" destination="nXW-ak-hkn" id="QA8-ky-MlA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="02c-s8-A1A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Dd-2d-pG8"/>
+                            <constraint firstItem="02c-s8-A1A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DVC-Yq-Rpi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="02c-s8-A1A" secondAttribute="trailing" id="YNo-Ru-Zeb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="02c-s8-A1A" secondAttribute="bottom" id="gqY-tr-ssT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Quick Notes" id="cPX-it-WaT"/>
+                    <connections>
+                        <outlet property="NotesTextView" destination="3Mu-gE-KSo" id="QSt-tE-mQ5"/>
+                        <outlet property="tableView" destination="02c-s8-A1A" id="nxc-Zh-xPX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JOh-le-o6l">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oPl-ZF-ID1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="HK8-NM-8Y9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="V5L-Ld-SZH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IAC-wj-dCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="178" y="138"/>
+        </scene>
+    </scenes>
+</document>
